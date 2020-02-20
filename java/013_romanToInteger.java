@@ -8,9 +8,9 @@ class Solution {
         values.put('C', 100);
         values.put('D', 500);
         values.put('M', 1000);
-        int num = 0;
-        for (int i = s.length - 1; i >= 0; i--) {
-            if (values.get(s.charAt(i)) < values.get(s.charAt(i - 1))) {
+        int num = values.get(s.charAt(s.length() - 1));
+        for (int i = s.length() - 2; i >= 0; i--) {
+            if (values.get(s.charAt(i)) < values.get(s.charAt(i + 1))) {
                 num -= values.get(s.charAt(i));
             } else {
                 num += values.get(s.charAt(i));

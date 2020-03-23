@@ -1,5 +1,3 @@
-// [ -10, -3, 0, 5, 9 ]
-
 class Solution {
     public TreeNode sortedArrayToBST(int[] nums) {
         return sortedArrayToBSTHelper(nums, 0, nums.length - 1);
